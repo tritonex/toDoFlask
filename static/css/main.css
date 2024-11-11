@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+table,
+tr,
+th,
+td {
+  width: 30%;
+  border: 1px solid black;
+  margin: auto;
+}

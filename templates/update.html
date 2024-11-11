@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block head %}
+<title>Update Task</title>
+{% endblock %} {% block body %}
+<div class="content">
+  <h1>Update Task</h1>
+
+  <form action="{{ url_for('update', id=task.id) }}" method="POST">
+    <input type="text" name="content" value="{{ task.content }}" required />
+    <input
+      type="date"
+      name="date_target"
+      value="{{ task.date_target.strftime('%Y-%m-%d') if task.date_target else '' }}"
+    />
+    <input type="submit" value="Update Task" />
+  </form>
+</div>
+{% endblock %}
